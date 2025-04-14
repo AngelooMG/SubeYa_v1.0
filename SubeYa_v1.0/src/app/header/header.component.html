@@ -1,0 +1,44 @@
+<div class="container">
+    <header>
+      <a href="/" class="logo">
+        <img src="assets/icon4.png" alt="Logo del tren">
+        SubeYa!
+      </a>
+      <div class="nav-container">
+        <nav>
+          <a
+            href="#"
+            [ngClass]="{ 'active': activeRoute === 'inicio' }"
+            (click)="setActive('inicio')"
+            >Inicio</a
+          >
+          <a
+            class="nav-link"
+            (click)="navigateToPredictions($event); setActive('predicciones')"
+            [ngClass]="{ 'active': activeRoute === 'predicciones' }"
+            >Predicciones</a
+          >
+          <a
+            class="nav-link"
+            (click)="navigateToAbout($event); setActive('acerca-de')"
+            [ngClass]="{ 'active': activeRoute === 'acerca-de' }"
+            >Acerca de</a
+          >
+          <a
+            class="nav-link"
+            (click)="navigateToContact($event); setActive('contacto')"
+            [ngClass]="{ 'active': activeRoute === 'contacto' }"
+            >Contacto</a
+          >
+        </nav>
+        <div class="auth-buttons">
+          <button class="btn btn-secondary" (click)="navigateToRegister()">
+            Registrarse
+          </button>
+          <button class="btn btn-primary" (click)="navigateToLogin()">
+            Iniciar Sesión
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>

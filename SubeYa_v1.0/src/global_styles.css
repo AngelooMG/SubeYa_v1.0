@@ -1,0 +1,316 @@
+/* Global styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between; /* Mantén el espacio entre logo y el resto */
+  align-items: center;            /* Alinea verticalmente los elementos */
+  padding: 10px 20px;             /* Espaciado interno del header */
+  background-color: white;        /* Color de fondo */
+  position: center;                /* Fija el header en la parte superior */
+  top: 0;                         /* Asegura que esté en la parte superior */
+  width: 100%;                    /* Ocupa el 100% del ancho de la pantalla */
+  max-width: 1160px;              /* Máximo ancho para pantallas grandes */
+  margin-left: 0px;                 /* Centra el header en la página */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  z-index: 1000;                  /* Asegura que esté encima del contenido */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+nav {
+  margin-right: 20px; /* Espacio entre los enlaces y los botones de autenticación */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;  /* Alinea los enlaces de navegación y botones verticalmente */
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  transition: color 0.3s ease;
+  cursor: pointer; /* Hace que el cursor se vea como una mano */
+}
+
+nav a:hover {
+  color: #0056b3; /* Cambia el color cuando el cursor pasa por encima */
+}
+
+nav a.active {
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #333;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons .btn {
+  padding: 10px 20px;   /* Tamaño de los botones */
+  border: none;         /* Elimina el borde */
+  cursor: pointer;      /* Cursor de puntero */
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #333; /* Fondo del botón "Iniciar Sesión" */
+  color: #fff;            /* Texto blanco */
+}
+
+.btn-secondary {
+  background-color: #f4f4f4; /* Fondo del botón "Registrarse" */
+  color: #333;               /* Texto oscuro */
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  background-image: url('assets/image1.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+/* Capa de transparencia */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Ajusta la transparencia aquí */
+  z-index: 1;
+}
+
+/* Texto dentro del hero */
+.hero h1,
+.hero p,
+.cta-buttons {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima de la capa transparente */
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+}
+
+/* Features section styles */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.feature {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la sección del Mapa del Metro */
+.metro-map {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: left;
+}
+
+.metro-map-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.metro-map-text {
+  max-width: 600px;
+}
+
+.metro-map-text .cta-buttons {
+  margin-left: 30px;
+}
+
+.metro-map-img {
+  max-width: 400px;
+  height: auto;
+  transform: translateX(-60px);
+}
+
+/* Estilos para la sección de FAQ */
+.faq {
+  padding: 50px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.faq h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.faq p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin: 20px 0;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .feature img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .metro-map h2 {
+    font-size: 24px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  /* Estilos para el contenedor del gráfico */
+.chart-container {
+  width: 100%;
+  max-width: 800px; /* Ajusta el ancho máximo del gráfico */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco para el área del gráfico */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos específicos para el canvas */
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important; /* Asegura que el gráfico mantenga la proporción */
+}
+}

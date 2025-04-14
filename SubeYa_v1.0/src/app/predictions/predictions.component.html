@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Predicción de Pasajeros</h1>
+    <p>Selecciona una estación, fecha y hora para obtener una predicción de la cantidad de pasajeros.</p>
+    
+    <div class="prediction-form">
+      <h2>Parámetros de Predicción</h2>
+      
+      <div class="form-group">
+        <label for="estacion">Estación</label>
+        <select id="estacion" [(ngModel)]="estacion">
+          <option value="">Selecciona una estación</option>
+          <option *ngFor="let station of stations" [value]="station">{{ station }}</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" [(ngModel)]="fecha">
+      </div>
+      
+      <div class="form-group">
+        <label for="hora">Hora</label>
+        <select id="hora" [(ngModel)]="hora">
+          <option value="">Selecciona una hora</option>
+          <option *ngFor="let h of horas" [value]="h">{{h}}</option>
+        </select>
+      </div>
+      
+      <button (click)="mostrarPrediccion()" class="btn-primary">Mostrar Predicción</button>
+    </div>
+    
+    <div *ngIf="prediccionRealizada" class="prediction-result">
+      <h2>Resultados de la Predicción</h2>
+      <p>Pasajeros estimados: {{ numeroPredicho }}</p>
+      
+      <div class="export-buttons">
+        <button (click)="exportarCSV()" class="btn-secondary">Exportar a CSV</button>
+      </div>
+    </div>
+  </div>
